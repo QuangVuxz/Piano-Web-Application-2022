@@ -42,13 +42,14 @@
                       </ul>
 
                       <ul class="nav navbar-nav navbar-right">
-                          <li><a href="pages/info.html"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                          <li id="profile"><a href="pages/info.html"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                           <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
                               <ul class="dropdown-menu">
-                                  <li><a href="pages/login.html">Login</a></li>
-                                  <li><a href="pages/register.html">Sign Up</a></li>
+                                  <li id="login"><a href="pages/login.html">Login</a></li>
+                                  <li id="register"><a href="pages/register.html">Sign Up</a></li>
                               </ul>
                           </li>
+                          <li id="logOut"><a href="#"><span></span> Log Out</a></li>
                       </ul>
                   </div>
               </div>
@@ -59,6 +60,8 @@
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="models\User.js"></script>
+    <script src="scripts\home.js"></script>
 </body>
 </html>
 
