@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Register</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- add icon link -->
+  <link rel = "icon" href = 
+  "https://img.freepik.com/free-vector/music-design-yellow-illustration_24877-49373.jpg?auto=format&h=200" 
+          type = "image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <div class="login-box">
+      <h2>Register</h2>
+      <form>
+        <div class="user-box">
+          <input
+            type="text"
+            name="Yourname"
+            placeholder="Your name"
+            required=""
+          />
+        </div>
+        <div class="user-box">
+          <input type="text" name="Gmail" placeholder="Gmail" required="" />
+        </div>
+        <div class="user-box">
+          <input
+            type="text"
+            name="Username"
+            placeholder="Username"
+            required=""
+          />
+        </div>
+        <div class="user-box">
+          <input
+            type="password"
+            name="Password"
+            placeholder="Password"
+            required=""
+          />
+        </div>
+        <div class="user-box">
+          <input
+            type="password"
+            name="PasswordConfirm"
+            placeholder="Password confirm"
+            required=""
+          />
+        </div>
+        <div class="button-form">
+          <button id="submit">Register</button>
+          <div id="register">
+            Already have an account?
+            <a href="login.html">Login here</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="../models/User.js"></script>
+    <script src="../scripts/register.js"></script>
+  </body>
+</html>
