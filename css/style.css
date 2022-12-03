@@ -9,8 +9,10 @@
 }
 
 body {
-  background: #131315;
-  font-family: var(--font-style);
+  background-image: linear-gradient(to bottom right, #BEEBF1, #F3ACCC);
+  height: 100vh;
+  overflow: hidden;
+  font-family: monospace;
 }
 
 .login-box {
@@ -110,10 +112,6 @@ img {
   position: inline;
 }
 
-body{
-  background:#DCDCDC;
-  margin-top:20px;
-}
 .card-box {
   padding: 20px;
   border-radius: 3px;
