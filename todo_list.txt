@@ -1,0 +1,3 @@
+3/12:
+-Check responsesive for taskbar + main(home.html)
+-Edit index.html file
