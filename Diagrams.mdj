@@ -310,7 +310,7 @@
 											"top": 341,
 											"width": 64.2763671875,
 											"height": 13,
-											"text": "App"
+											"text": "Admin"
 										},
 										{
 											"_type": "LabelView",
@@ -3185,7 +3185,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGEaoIZ1GcU2os="
 					},
-					"name": "App"
+					"name": "Admin"
 				},
 				{
 					"_type": "UMLUseCase",
