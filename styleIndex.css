@@ -1,0 +1,42 @@
+/* Add some styling to the page */
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-image: url('https://wallpaperaccess.com/full/647823.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+      
+      h1 {
+        font-size: 3em;
+        text-align: center;
+        margin: 1em 0;
+        color: white;
+      }
+      
+      p {
+        font-size: 1.5em;
+        line-height: 1.5;
+        margin: 0.5em 0;
+        color: white;
+      }
+      
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 1em;
+      }
+      
+      /* Add some styling to the call-to-action button */
+      .cta-btn {
+        display: inline-block;
+        padding: 0.5em 1em;
+        color: white;
+        background-color: #00b0ff;
+        border-radius: 0.25em;
+        text-decoration: none;
+      }
+      
+      .cta-btn:hover {
+        background-color: #0091ea;
+      }
