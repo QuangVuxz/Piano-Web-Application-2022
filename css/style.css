@@ -13,6 +13,7 @@ body {
   height: 100vh;
   overflow: hidden;
   font-family: monospace;
+  background-image: url('https://wallpaperaccess.com/full/647823.jpg');
 }
 
 .login-box {
