@@ -25,7 +25,7 @@
       
       <!-- Add a call-to-action button -->
       <p>
-        <a href="./pages/login.html" class="cta-btn">Learn More</a>
+        <a href="login.php" class="cta-btn">Learn More</a>
       </p>
     </div>
   </body>
