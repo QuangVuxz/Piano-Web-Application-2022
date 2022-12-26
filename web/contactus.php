@@ -52,7 +52,7 @@
                                 </ul>
                             -->
                             </li>
-                            <li id="logOut"><a href="index.php?logout=<?php echo $user_id;?>">Logout</a></div>
+                            <li id="logOut"><a href="index.php">Log Out</a></li>
                         </ul>
                     </div>
                 </div>
