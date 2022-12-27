@@ -9,6 +9,45 @@
   "https://img.freepik.com/free-vector/music-design-yellow-illustration_24877-49373.jpg?auto=format&h=200" 
           type = "image/x-icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+  <style>
+        /* Style the search bar */
+    form {
+    /* Add some padding and a border */
+    
+    /* Use flexbox to center the search bar within the form element */
+    display: flex;
+    justify-content: center;
+    }
+
+    input[type="text"] {
+    /* Give the search bar some padding and a border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* Make the search bar wider */
+    width: 50%;
+    /* Add some rounded corners */
+    border-radius: 10px;
+    margin-right: 10px;
+    }
+    /* Style the container element */
+    .container {
+    /* Add some padding and a border */
+        padding: 20px;
+        border: 1px solid #ccc;
+        /* Center the content within the container */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Style the heading */
+    h1 {
+        /* Change the font size and color */
+        font-size: 36px;
+        color: #333;
+    }
+
+  </style>
 </head>
 <body>
      <!--Navbar-->
@@ -61,15 +100,57 @@
     <!--Main page-->
     <!--Search bar-->
     <div class="search">
-      <form action="" class="form-search">
-        <div class="form-group">
-            <div class="input-group">
-                <input type="search" name="search" id="search" placeholder="Search Anything Here..." class="form-control">
-                <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-            </div>
-        </div>
-    </form>
+            <!-- Create a form element to hold the search bar -->
+        <form action="https://www.google.com/webhp?hl=vi&sa=X&ved=0ahUKEwj1zvLrqZn8AhXAslYBHczWBK0QPAgI">
+            <!-- Use an input element with type "text" to create the search bar -->
+            <input type="text" placeholder="Search...">
+            <button id="btn_search">Search</button>
+        </form>
     </div>
+    <!--Main container-->
+    <!-- Create a container element to hold the page content -->
+<div class="container">
+    <!-- Add a heading for the page -->
+    <h1>Lesson: How to Play "Twinkle, Twinkle, Little Star"</h1>
+    <p>Uploaded by: </p>
+    <p>Date:</p>
+    <!-- Add a navigation menu -->
+    <ul class="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Lessons</a></li>
+      <li><a href="#">Exercises</a></li>
+      <li><a href="#">Community</a></li>
+    </ul>
+    <!-- Add a video player -->
+    <video width="700" height="300" controls>
+        <source src="https://www.youtube.com/embed/XGSy3_Czz8k" type="video/mp4">
+    </video>
+    <!-- Add some text explaining the lesson -->
+    <p>In this lesson, we will learn how to play the classic children's song "Twinkle, Twinkle, Little Star" on the piano. Follow along with the video and try to play along with the music. If you have any questions, you can post them in the comments section below.</p>
+    <!-- Add a comments section -->
+    <h2>Comments</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" required></textarea>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+    <!-- Add a list of comments -->
+    <ul class="comments">
+      <li>
+        <h3>John</h3>
+        <p>This is a great lesson! I'm already starting to get the hang of it.</p>
+      </li>
+      <li>
+        <h3>Jane</h3>
+        <p>Thanks for the lesson! I'm still having a bit of trouble with the left hand, but I'm sure I'll get it eventually.</p>
+      </li>
+    </ul>
+  </div>
+  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="models\User.js"></script>
