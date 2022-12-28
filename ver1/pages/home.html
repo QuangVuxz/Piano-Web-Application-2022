@@ -46,7 +46,19 @@
         font-size: 36px;
         color: #333;
     }
-
+    /* Style the submit button */
+button[type="submit"] {
+  /* Add some padding and a border */
+  padding: 10px 20px;
+  border: none;
+  /* Change the background color and text color */
+  background-color: #4CAF50;
+  color: white;
+  /* Add some rounded corners */
+  border-radius: 10px;
+  /* Change the cursor to a pointer when hovering over the button */
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
@@ -127,6 +139,15 @@
     </video>
     <!-- Add some text explaining the lesson -->
     <p>In this lesson, we will learn how to play the classic children's song "Twinkle, Twinkle, Little Star" on the piano. Follow along with the video and try to play along with the music. If you have any questions, you can post them in the comments section below.</p>
+    </form>
+    <!-- Create a form element to hold the upload file field -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+    <!-- Add a file input field -->
+    <label for="file">Select a file to upload:</label>
+    <input type="file" id="file" name="file" required>
+    <!-- Add a submit button -->
+    <button type="submit">Upload</button>
+    </form>
     <!-- Add a comments section -->
     <h2>Comments</h2>
     <form>
@@ -137,7 +158,7 @@
       <textarea id="comment" name="comment" required></textarea>
       <br>
       <input type="submit" value="Submit">
-    </form>
+    
     <!-- Add a list of comments -->
     <ul class="comments">
       <li>
