@@ -8,7 +8,8 @@
   <link rel = "icon" href = 
   "https://img.freepik.com/free-vector/music-design-yellow-illustration_24877-49373.jpg?auto=format&h=200" 
           type = "image/x-icon">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="styleHomepage.css">  
   <title>Home</title>
 </head>
 <body>
@@ -42,15 +43,6 @@
   
                         <ul class="nav navbar-nav navbar-right">
                             <li id="profile"><a href="profile.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                            <!--
-                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
-                            
-                                <ul class="dropdown-menu">
-                                    <li id="login"><a href="login.html">Login</a></li>
-                                    <li id="register"><a href="register.html">Sign Up</a></li>
-                                </ul>
-                            -->
-                            </li>
                             <li id="logOut"><a href="index.php">Log Out</a></li>
                         </ul>
                     </div>
@@ -59,82 +51,50 @@
         </div>
     </div>
     <!--Main page-->
-    <div class="videos">
-      <!-- a video starts -->
-        <div class="video">
-           <div class="thumbnail">
-              <img src="https://img.youtube.com/vi/zUwB_imVjmg/maxresdefault.jpg" alt="" />
-            </div>
+    <!--Search bar-->
+    <div class="search">
+            <!-- Create a form element to hold the search bar -->
+        <form action="https://www.google.com/webhp?hl=vi&sa=X&ved=0ahUKEwj1zvLrqZn8AhXAslYBHczWBK0QPAgI">
+            <!-- Use an input element with type "text" to create the search bar -->
+            <input type="text" placeholder="Search...">
+            <button id="btn_search">Search</button>
+        </form>
+    </div>
+    <!--Main container-->
+    <!-- Create a container element to hold the page content -->
+    <div class="container">
+        <!-- Add a heading for the page -->
+        <h1>Lesson: How to Play "Twinkle, Twinkle, Little Star"</h1>
+        <p>Uploaded by: </p>
+        <p>Date:</p>
+        <!-- Add a navigation menu -->
+        <ul class="nav">
+        <li><a href="#">Lessons</a></li>
+        <li><a href="#">Exercises</a></li>
+        </ul>
+        <!-- Add a video player -->
+        <video width="700" height="300" controls>
+            <source src="https://www.youtube.com/embed/XGSy3_Czz8k" type="video/mp4">
+        </video>
+        <!-- Add some text explaining the lesson -->
+        <p>In this lesson, we will learn how to play the classic children's song "Twinkle, Twinkle, Little Star" on the piano. Follow along with the video and try to play along with the music. If you have any questions, you can post them in the comments section below.</p>
+        </form>
+        <!-- Create a form element to hold the upload file field -->
+        <form action="/upload" method="post" enctype="multipart/form-data">
+        <!-- Add a file input field -->
+        <label for="file">Select a file to upload:</label>
+        <input type="file" id="file" name="file" required>
+        <!-- Add a submit button -->
+        <button type="submit">Upload</button>
+        </form>
+        <div class="result">
+            <!-- Add a heading for the score result -->
+            <h1>Score Result</h1>
+            <!-- Add some text to display the score -->
+            <p>Your score is: <span class="score">10</span></p>
+        </div>
+    </div>
     
-              <div class="details">
-                 <div class="author">
-                    <img src="https://yt3.ggpht.com/bpzY-S4DYlbTeOpY5hIA7qz_hcbMkgvLAugtwKBGTTImNnWAGudX0y53bo_fJZ0auypxrWkUiw=s88-c-k-c0x00ffffff-no-rj" alt="" />
-                 </div>
-                 <div class="title">
-                    <h3>
-                        Introverts & Content Creation | Sumudu Siriwardana
-                     </h3>
-                     <a href="">
-                            Francesco Ciulla
-                      </a>
-                      <span> 2M Views • 3 Months Ago </span>
-                 </div>
-               </div>
-    
-             </div>
-       <!-- a video Ends -->
-     </div>
-
-     <div class="videos">
-        <!-- a video starts -->
-          <div class="video">
-             <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/zUwB_imVjmg/maxresdefault.jpg" alt="" />
-              </div>
-      
-                <div class="details">
-                   <div class="author">
-                      <img src="https://yt3.ggpht.com/bpzY-S4DYlbTeOpY5hIA7qz_hcbMkgvLAugtwKBGTTImNnWAGudX0y53bo_fJZ0auypxrWkUiw=s88-c-k-c0x00ffffff-no-rj" alt="" />
-                   </div>
-                   <div class="title">
-                      <h3>
-                          Introverts & Content Creation | Sumudu Siriwardana
-                       </h3>
-                       <a href="">
-                              Francesco Ciulla
-                        </a>
-                        <span> 2M Views • 3 Months Ago </span>
-                   </div>
-                 </div>
-      
-               </div>
-         <!-- a video Ends -->
-       </div>
-       <div class="videos">
-        <!-- a video starts -->
-          <div class="video">
-             <div class="thumbnail">
-                <img src="https://img.youtube.com/vi/zUwB_imVjmg/maxresdefault.jpg" alt="" />
-              </div>
-      
-                <div class="details">
-                   <div class="author">
-                      <img src="https://yt3.ggpht.com/bpzY-S4DYlbTeOpY5hIA7qz_hcbMkgvLAugtwKBGTTImNnWAGudX0y53bo_fJZ0auypxrWkUiw=s88-c-k-c0x00ffffff-no-rj" alt="" />
-                   </div>
-                   <div class="title">
-                      <h3>
-                          Introverts & Content Creation | Sumudu Siriwardana
-                       </h3>
-                       <a href="">
-                              Francesco Ciulla
-                        </a>
-                        <span> 2M Views • 3 Months Ago </span>
-                   </div>
-                 </div>
-      
-               </div>
-         <!-- a video Ends -->
-       </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="models\User.js"></script>
