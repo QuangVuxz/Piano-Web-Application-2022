@@ -73,9 +73,9 @@
         <li><a href="#">Exercises</a></li>
         </ul>
         <!-- Add a video player -->
-        <video width="700" height="300" controls>
-            <source src="https://www.youtube.com/embed/XGSy3_Czz8k" type="video/mp4">
-        </video>
+        <audio controls>
+        <source src="music\music_upload_api\BeautifulInWhite-Piano-3061736.mp3" type="audio/mpeg">
+        </audio>
         <!-- Add some text explaining the lesson -->
         <p>In this lesson, we will learn how to play the classic children's song "Twinkle, Twinkle, Little Star" on the piano. Follow along with the video and try to play along with the music. If you have any questions, you can post them in the comments section below.</p>
         </form>
