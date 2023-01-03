@@ -131,7 +131,7 @@
           <input type="submit" name="submit" value="Register" id="submit">          
           <div id="register">
             Already have an account?
-            <a href="login.html">Login here</a>
+            <a href="login.php">Login here</a>
           </div>
         </div>
       </form>
