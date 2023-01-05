@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel = "icon" href = 
+    "https://img.freepik.com/free-vector/music-design-yellow-illustration_24877-49373.jpg?auto=format&h=200" 
+          type = "image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style_Play_song.css" />
     <title>Piano</title>
@@ -16,18 +19,12 @@
               <div class="col-lg-12">  
                   <div class="navbar-header">
                       <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                      <a href="home.php" class="navbar-brand">PIANO</a>
+                      <a href="PlaySong.php" class="navbar-brand">PIANO</a>
                   </div>
-
-                  <div class="navbar-collapse collapse" id="mobile_menu">
-                      <ul class="nav navbar-nav">
-                          <li><a href="leaderboard.php">Leaderboard</a></li>
-                          <li><a href="contactus.php">Contact Us</a></li>
-                      </ul>
-
                       <ul class="nav navbar-nav navbar-right">
-                          <li id="profile"><a href="profile.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                          <li id="logOut"><a href="index.php">Log Out</a></li>
+                        <li><a href="../excercises.php">Excercises</a></li>
+                          <li id="profile"><a href="../profile.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                          <li id="logOut"><a href="../index.php">Log Out</a></li>
                       </ul>
                   </div>
               </div>
