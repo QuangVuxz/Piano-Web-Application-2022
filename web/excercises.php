@@ -31,7 +31,8 @@
                     <a href="./PlaySong/PlaySong.php" class="navbar-brand">PIANO</a>
                 </div>
                     <ul class="nav navbar-nav navbar-right">
-                    <li><a href="excercises.php">Excercises</a></li>
+                        <li><a href="excercises.php">Excercises</a></li>
+                        <li id="search_data"><a href="search.php">Search</a></li>
                         <li id="profile"><a href="profile.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                         <li id="logOut"><a href="index.php">Log Out</a></li>
                     </ul>
@@ -40,30 +41,21 @@
         </div>
     </div>
 </div>
-<!--Search bar-->
-<div class="search">
-    <!-- Create a form element to hold the search bar -->
-    <form action="https://www.google.com/webhp?hl=vi&sa=X&ved=0ahUKEwj1zvLrqZn8AhXAslYBHczWBK0QPAgI">
-        <!-- Use an input element with type "text" to create the search bar -->
-        <input type="text" placeholder="Search lession here...">
-        <button id="btn_search">Search</button>
-    </form>
-</div>
 <!--Main-->
 <main>
     <?php
         while($row = mysqli_fetch_assoc($all_song)){
     ?>
     <div class="music_card">
-    <div class="image">
-        <img src="<?php echo $row["lession_img"]; ?>" alt="">
+        <div class="image">
+            <img src="<?php echo $row["lession_img"]; ?>" alt="">
+        </div>
+        <div class="caption">
+            <p class="rate">Level: Beginner</p>
+            <p class="song_name">Song name: <?php echo $row["lession_name"]?></p>            
+        </div>
+        <button><a href="PlaySong\play-song.php?id=<?php echo $row['lession_id'];?>" class="playSong">Play</a></button>  
     </div>
-    <div class="caption">
-        <p class="rate">Level: Beginner</p>
-        <p class="song_name">Song name: <?php echo $row["lession_name"]?></p>
-    </div>
-    <button class="playSong">Play</button>
-</div>
 <?php
     }
 ?>

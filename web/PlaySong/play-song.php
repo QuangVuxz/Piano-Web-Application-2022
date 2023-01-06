@@ -1,19 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "icon" href = 
     "https://img.freepik.com/free-vector/music-design-yellow-illustration_24877-49373.jpg?auto=format&h=200" 
           type = "image/x-icon">
+    <link rel="stylesheet" href="style_Play_song.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style_Play_song.css" />
-    <title>Piano</title>
-  </head>
-  <body>
-    <!--Navbar-->
-    <div class="navbar navbar-inverse">
+    <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #9568e4;
+      height: 100vh;
+    }
+
+    .piano-container {
+      display: flex;
+      margin: 0 auto;
+      position: relative;
+      padding: 1rem;
+      margin-top: 2rem;
+      margin-left: 13rem;
+      justify-self: center;
+    }
+    .lession-iframe{
+      display: flex;
+      border: 10px solid #000634;
+      position: relative;
+      margin-top: 2rem;
+      justify-self: center;
+    }
+    .key {
+      width: 4rem;
+      height: 13rem;
+      border-radius: 0 0 4px 4px;
+      box-shadow: 2px 2px 10px 0px #ccc;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .white-key {
+      border: 3px solid #010425;
+      background-color: #fff;
+      transition: 0.2s all;
+    }
+
+    .white-active,
+    .white-key:hover {
+      background-color: rgba(81, 182, 178);
+      border-bottom: none;
+      transform: rotate3d(1, 0, 0, 20deg);
+    }
+
+    .black-key {
+      background: rgb(36, 32, 30);
+      z-index: 1;
+      background: linear-gradient(
+        180deg,
+        rgba(36, 32, 30, 1) 26%,
+        rgba(79, 82, 71, 1) 86%
+      );
+      height: 7rem;
+      width: 1.5rem;
+      position: absolute;
+      top: 20px;
+      transition: 0.2s all;
+    }
+
+    .black-1 {
+      left: 44px;
+    }
+
+    .black-2 {
+      left: 84px;
+    }
+
+    .black-3 {
+      left: 164px;
+    }
+
+    .black-4 {
+      left: 204px;
+    }
+    .black-5 {
+      left: 244px;
+    }
+
+    .black-6 {
+      left: 324px;
+    }
+    .black-7 {
+      left: 365px;
+    }
+
+    .black-8 {
+      left: 444px;
+    }
+
+    .black-9 {
+      left: 484px;
+    }
+
+    .black-10 {
+      left: 524px;
+    }
+    .black-11 {
+      left: 604px;
+    }
+
+    .black-12 {
+      left: 644px;
+    }
+
+    .black-13 {
+      left: 724px;
+    }
+
+    .black-14 {
+      left: 764px;
+    }
+
+    .black-15 {
+      left: 804px;
+    }
+
+    .black-key:hover, .black-active{
+      background: linear-gradient(
+        180deg,
+        rgba(36, 32, 30, 1) 26%,
+        rgba(136, 173, 33) 86%
+      );
+      transform: translateY(20px);
+    }
+    .tutorial-white-key{
+      display: inline-block;
+      margin-left: 3rem;
+    }
+    .tutorial-black-key{
+      display: inline-block;
+    }
+    </style>
+    <?php
+    
+    $conn = mysqli_connect('localhost','root','','user_db') or die('connection failed');
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $songId= $_GET['id'];        
+    $sql = "SELECT * FROM lession_db WHERE lession_id = $songId";
+    $result = mysqli_query($conn, $sql);
+    $song = mysqli_fetch_assoc($result);       
+    ?>
+    <title>Play</title>
+</head>
+<body>  
+  <!--Navbar-->
+  <div class="navbar navbar-inverse">
       <div class="container-fluid">
           <div class="row">
               <div class="col-lg-12">  
@@ -33,12 +184,17 @@
           </div>
       </div>
   </div>
-<!--Main container-->
+    
+    <!--Main container-->
 <!-- Create a container element to hold the page content -->
 <div class="container">
 <!-- Add a heading for the page -->
-<h1>How to Play?</h1>
-    <iframe src="https://www.youtube.com/embed/3gZC5763wYk?autoplay=1?" class="lession-iframe" width="680" height="315"></iframe>
+  <div class="content" style="display: flex; flex-direction:column;font-size: 40px;text-align:center;">
+        <?php
+        echo $song['lession_name'];
+        echo '<iframe width="600" height="315" src="'.$song['lession_url'].'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        ?>
+    </div>
     <div class="piano-container">  
       <!-- White-keys -->
       <div class="white-key key" id="one">C</div>
@@ -135,5 +291,5 @@
   </div>  
     
     <script src="main_Play_song.js"></script>
-  </body>
+</body>
 </html>

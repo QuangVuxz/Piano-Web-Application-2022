@@ -106,6 +106,6 @@
       </form>
     </div>
     <script src="../models/User.js"></script>
-    <script src="../scripts/login.js"></script>
+    <script src="login_script.js"></script>
   </body>
 </html>
