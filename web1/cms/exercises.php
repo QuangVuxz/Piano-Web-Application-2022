@@ -61,8 +61,8 @@ include "menus.php";
 											<tr>
 												<td><div id='id'>".$row['lesson_id']."</div></td>
 												<td><div id='username'>".$row['lesson_name']."</div></td>
-												<td><div id='username'>".$row['lesson_url']."</div></td>
-												<td><div id='username'>".$row['lesson_img']."</div></td>											
+												<td><div id='video'>".$row['lesson_url']."</div></td>
+												<td style='max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><div id='img'>".$row['lesson_img']."</div></td>											
 												<td><button class='btn btn-primary'><a href='update_ex.php?update=".$row['lesson_id']."' style='color:white; text-decoration:none;'>Update</a></button><td>												
 												<td><button class='btn btn-danger'><a href='delete_ex.php?delete=".$row['lesson_id']."' style='color:white; text-decoration:none;'>Delete</a><td>										
 											</tr>

@@ -65,8 +65,8 @@
       if(isset($_POST['submit'])){
         $username = $_POST['username'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
-        $cpassword = $_POST['passwordConfirm'];
+        $password = md5($_POST['password']);
+        $cpassword = md5($_POST['passwordConfirm']);
         $image = $_FILES['image']['name'];
         $image_size = $_FILES['image']['size'];
         $image_tmp_name = $_FILES['image']['tmp_name'];

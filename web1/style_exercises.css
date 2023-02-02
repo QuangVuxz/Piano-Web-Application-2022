@@ -1,13 +1,13 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    font-family:Cambria, Cochin, Georgia;
+    box-sizing: border-box;    
     color: black;
 }
   
 body {    
     height: 100vh;
+    background-color: #1a1a1a;
 }
 /* Style the search bar */
 form {
@@ -43,6 +43,7 @@ main .music_card{
     text-align: center;    
     border: 1px solid lightgray;
     margin: 20px;
+    background-color: #242026;
 }
 
 main .music_card .image{
@@ -65,6 +66,7 @@ main .music_card .caption{
 
 main .music_card .caption p{
     font-size:1.5rem;
+    color: white;
 }
 
 main .music_card .caption .rate{

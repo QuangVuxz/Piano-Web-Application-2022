@@ -4,7 +4,7 @@ include('inc/header.php');
 if(isset($_POST['submit'])){
     $username = $_POST['username'];
 	$email = $_POST['email'];
-	$password = $_POST['password'];
+	$password = md5($_POST['password']);
     $sql= mysqli_query($conn,"INSERT into `user_form` (username,email,password) values('$username','$email','$password')") or die('query failed');
     if($sql){
         // echo "Updated Successfully";

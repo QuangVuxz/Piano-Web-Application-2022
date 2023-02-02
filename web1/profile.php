@@ -1,18 +1,6 @@
 <?php
-        include 'config.php'; 
-        session_start();       
-        $user_id = $_SESSION['user_id'];
-        
-
-        if(!isset($user_id)){
-            header('location:login.php');
-        };
-        
-        if(isset($_GET['logout'])){ 
-            session_destroy();       
-            unset($user_id);           
-            header('location:index.php');
-        }
+        include 'config.php';
+        include './user.php';       
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +35,7 @@
                     </div>                    
                     <div class="col"><h3><?php echo $fetch['username'];?></h3></div>
                     <div class="col"><a href="update_profile.php">Update Profile</a></div>
-                    <div class="col"><a href="index.php?logout=<?php echo $user_id;?>">Logout</a></div>
+                    <div class="col"><a href="./user_logout.php">Logout</a></div>
                 </div>
             </form>
         </div>

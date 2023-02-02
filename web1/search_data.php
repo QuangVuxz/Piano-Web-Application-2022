@@ -19,6 +19,7 @@
   
 body {    
     height: 100vh;
+    background-color: #1a1a1a;
 }
 /* Style the search bar */
 form {
@@ -54,6 +55,7 @@ main .music_card{
     text-align: center;    
     border: 1px solid lightgray;
     margin: 20px;
+    background-color: #242026;
 }
 
 main .music_card .image{
@@ -76,6 +78,7 @@ main .music_card .caption{
 
 main .music_card .caption p{
     font-size:1.5rem;
+    color: white;
 }
 
 main .music_card .caption .rate{
@@ -131,11 +134,10 @@ main .music_card{
                     <div class="image">
                         <img src="<?php echo $row["lesson_img"]; ?>" alt="">
                     </div>
-                    <div class="caption">
-                        <p class="rate">Level: Beginner</p>
+                    <div class="caption">                        
                         <p class="song_name">Song name: <?php echo $row["lesson_name"]?></p>            
                     </div>
-                    <button><a href="./PlaySong/play-song.php?id=<?php echo $row['lesson_id'];?>" class="playSong">Play</a> </button>     
+                    <button><a href="play-song.php?id=<?php echo $row['lesson_id'];?>" class="playSong">Play</a> </button>     
                 </div>
 
                     <?php
@@ -143,7 +145,7 @@ main .music_card{
             ?>
         <?php
         }else{
-            echo "No data found";
+            echo "<p style='color:white;'>No data found</p>";
         }
     }
 ?>

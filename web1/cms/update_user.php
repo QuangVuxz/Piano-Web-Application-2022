@@ -10,7 +10,7 @@ $password = $row['password'];
 if(isset($_POST['submit'])){
     $username = $_POST['username'];
 	$email = $_POST['email'];
-	$password = $_POST['password'];
+	$password = md5($_POST['password']);
     $sql= mysqli_query($conn,"UPDATE `user_form` SET id=$id,username='$username',email='$email',password='$password' WHERE id=$id") or die('query failed');
     if($sql){
         // echo "Updated Successfully";

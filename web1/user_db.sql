@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 08, 2023 lúc 06:11 PM
+-- Thời gian đã tạo: Th2 02, 2023 lúc 01:21 PM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 7.4.33
 
@@ -69,7 +69,8 @@ INSERT INTO `lesson_db` (`lesson_id`, `lesson_name`, `lesson_url`, `lesson_img`)
 (9, 'Let It Go - Frozen', 'https://www.youtube.com/embed/lzW5e_iHHAk', 'https://i1.sndcdn.com/artworks-RC6MgYirRW26-0-t500x500.jpg'),
 (10, 'I See The Light - Tangled', 'https://www.youtube.com/embed/x_q7reH9Xm8', 'https://i1.sndcdn.com/artworks-uJg8Fdq8OkdZ-0-t500x500.jpg'),
 (11, 'Deck The Halls', 'https://www.youtube.com/embed/c5-XelVYdWw', 'https://i1.sndcdn.com/artworks-oWHSSMvmAp0uG20x-S6BWew-t500x500.jpg'),
-(12, 'All', 'https://www.youtube.com/embed/Ff7cy4yjE9c', 'https://m.media-amazon.com/images/I/61opvz61ZqL.jpg');
+(12, 'All I Want For Christmas Is You', 'https://www.youtube.com/embed/Ff7cy4yjE9c', 'https://m.media-amazon.com/images/I/61opvz61ZqL.jpg'),
+(13, 'Wednesday', 'https://www.youtube.com/embed/wfwmOZvaIbw', 'https://i.ytimg.com/vi/hPElosvJ-Ek/maxresdefault.jpg');
 
 -- --------------------------------------------------------
 
@@ -90,10 +91,7 @@ CREATE TABLE `user_form` (
 --
 
 INSERT INTO `user_form` (`id`, `username`, `email`, `password`, `image`) VALUES
-(1, 'test', 'test@gmail.com', '123', ''),
-(2, 'thangle', 'thangle@gmail.com', '123', ''),
-(3, 'rider', 'rider@gmail.com', '123', ''),
-(4, 'rider1', 'rider1@gmail.com', '1', '');
+(1, 'thang', 'thang@gmail.com', '202cb962ac59075b964b07152d234b70', '');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -131,13 +129,13 @@ ALTER TABLE `admin_form`
 -- AUTO_INCREMENT cho bảng `lesson_db`
 --
 ALTER TABLE `lesson_db`
-  MODIFY `lesson_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `lesson_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT cho bảng `user_form`
 --
 ALTER TABLE `user_form`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

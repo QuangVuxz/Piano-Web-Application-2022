@@ -4,13 +4,13 @@
       
       if(isset($_POST['submit'])){
         $username = $_POST['username'];        
-        $password = $_POST['password'];        
+        $password = md5($_POST['password']);        
 
         $select = mysqli_query($conn, "SELECT * FROM `user_form` WHERE username='$username' AND password='$password'") or die('query failed');
         if(mysqli_num_rows($select)>0){
           $row = mysqli_fetch_assoc($select);
           $_SESSION['user_id'] = $row['id'];
-          header('location:./Playsong/PlaySong.php');
+          header('location:./PlaySong.php');
         }else{
           $message[] = 'INCORRECT USERNAME OR PASSWORD!';
         }      
